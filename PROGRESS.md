@@ -1,17 +1,17 @@
 # PROGRESS.md — Rust チャットサーバー 学習進捗
 
 ## 現在のフェーズ
-- [ ] Phase 1: 同期版 土台
-- [ ] Phase 2: 同期版 マルチスレッド化
+- [x] Phase 1: 同期版 土台（完了）
+- [ ] Phase 2: 同期版 マルチスレッド化（次）
 - [ ] Phase 3: 非同期の概念理解
 - [ ] Phase 4: Tokio版への書き換え
 - [ ] Phase 5: 仕上げ
 
 ## 直近の作業
-（最後に作業した内容をここに書く）
+Phase 1 全ステップ完了: 1対1チャットサーバー（enum Message・match によるコマンド処理）動作確認済み
 
 ## 次にやること
-Phase 1 Step 1: `cargo new chat-server --bin` でプロジェクト作成
+Phase 2 Step 5: `thread::spawn` + `move` クロージャでマルチスレッド化
 
 ## 詰まっていること・メモ
 （エラー内容や疑問点があればここに書く）
@@ -21,10 +21,10 @@ Phase 1 Step 1: `cargo new chat-server --bin` でプロジェクト作成
 ## 完了済みステップ
 
 ### Phase 1: 同期版 土台
-- [ ] Step 1: `cargo new chat-server --bin` でプロジェクト作成
-- [ ] Step 2: `TcpListener::bind` で1対1接続の受け付け
-- [ ] Step 3: `BufReader` / `BufWriter` で行単位の読み書き
-- [ ] Step 4: `enum Message` と `match` でコマンド処理
+- [x] Step 1: `cargo new chat-server --bin` でプロジェクト作成
+- [x] Step 2: `TcpListener::bind` で1対1接続の受け付け
+- [x] Step 3: `BufReader` / `BufWriter` で行単位の読み書き
+- [x] Step 4: `enum Message` と `match` でコマンド処理
 
 ### Phase 2: 同期版 マルチスレッド化
 - [ ] Step 5: `thread::spawn` + `move` クロージャでスレッド起動
