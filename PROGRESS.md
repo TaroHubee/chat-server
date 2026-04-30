@@ -2,16 +2,16 @@
 
 ## 現在のフェーズ
 - [x] Phase 1: 同期版 土台（完了）
-- [ ] Phase 2: 同期版 マルチスレッド化（次）
+- [x] Phase 2: 同期版 マルチスレッド化（完了）
 - [ ] Phase 3: 非同期の概念理解
 - [ ] Phase 4: Tokio版への書き換え
 - [ ] Phase 5: 仕上げ
 
 ## 直近の作業
-Phase 1 全ステップ完了: 1対1チャットサーバー（enum Message・match によるコマンド処理）動作確認済み
+Phase 2 全ステップ完了: マルチスレッドチャットサーバー（Arc/Mutex/mpsc・コマンド・入退室通知・LAN公開）動作確認済み
 
 ## 次にやること
-Phase 2 Step 5: `thread::spawn` + `move` クロージャでマルチスレッド化
+Phase 3 Step 10: Rust Book Ch.17 を読んで Future・Poll の概念を整理
 
 ## 詰まっていること・メモ
 （エラー内容や疑問点があればここに書く）
@@ -27,11 +27,11 @@ Phase 2 Step 5: `thread::spawn` + `move` クロージャでマルチスレッド
 - [x] Step 4: `enum Message` と `match` でコマンド処理
 
 ### Phase 2: 同期版 マルチスレッド化
-- [ ] Step 5: `thread::spawn` + `move` クロージャでスレッド起動
-- [ ] Step 6: `Arc<Mutex<HashMap<SocketAddr, Sender>>>` で共有状態管理
-- [ ] Step 7: `std::sync::mpsc` でブロードキャスト実装
-- [ ] Step 8: `/nick`・`/list`・`/quit` コマンド実装・入退室通知
-- [ ] Step 9: バインドアドレスを `0.0.0.0:8080` にして LAN 公開
+- [x] Step 5: `thread::spawn` + `move` クロージャでスレッド起動
+- [x] Step 6: `Arc<Mutex<HashMap<SocketAddr, Sender>>>` で共有状態管理
+- [x] Step 7: `std::sync::mpsc` でブロードキャスト実装
+- [x] Step 8: `/nick`・`/list`・`/quit` コマンド実装・入退室通知
+- [x] Step 9: バインドアドレスを `0.0.0.0:8080` にして LAN 公開
 
 ### Phase 3: 非同期の概念理解
 - [ ] Step 10: Rust Book Ch.17 を読んで Future・Poll の概念を整理
