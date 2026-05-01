@@ -3,15 +3,15 @@
 ## 現在のフェーズ
 - [x] Phase 1: 同期版 土台（完了）
 - [x] Phase 2: 同期版 マルチスレッド化（完了）
-- [ ] Phase 3: 非同期の概念理解
+- [x] Phase 3: 非同期の概念理解（完了）
 - [ ] Phase 4: Tokio版への書き換え
 - [ ] Phase 5: 仕上げ
 
 ## 直近の作業
-Phase 2 全ステップ完了: マルチスレッドチャットサーバー（Arc/Mutex/mpsc・コマンド・入退室通知・LAN公開）動作確認済み
+Phase 3 全ステップ完了: Future・Poll・executor の概念理解、async/await 動作確認、tokio 導入、tokio::time::sleep vs thread::sleep の違いを体感
 
 ## 次にやること
-Phase 3 Step 10: Rust Book Ch.17 を読んで Future・Poll の概念を整理
+Phase 4 Step 15: `tokio::net::TcpListener` + `.accept().await` に置き換え
 
 ## 詰まっていること・メモ
 （エラー内容や疑問点があればここに書く）
@@ -34,11 +34,11 @@ Phase 3 Step 10: Rust Book Ch.17 を読んで Future・Poll の概念を整理
 - [x] Step 9: バインドアドレスを `0.0.0.0:8080` にして LAN 公開
 
 ### Phase 3: 非同期の概念理解
-- [ ] Step 10: Rust Book Ch.17 を読んで Future・Poll の概念を整理
-- [ ] Step 11: `async fn` / `.await` を小さなコードで試す
-- [ ] Step 12: `tokio = { features = ["full"] }` を Cargo.toml に追加
-- [ ] Step 13: `#[tokio::main]` でエントリポイントを作成
-- [ ] Step 14: `tokio::time::sleep` と `thread::sleep` の違いを体感
+- [x] Step 10: Rust Book Ch.17 を読んで Future・Poll の概念を整理
+- [x] Step 11: `async fn` / `.await` を小さなコードで試す
+- [x] Step 12: `tokio = { features = ["full"] }` を Cargo.toml に追加
+- [x] Step 13: `#[tokio::main]` でエントリポイントを作成
+- [x] Step 14: `tokio::time::sleep` と `thread::sleep` の違いを体感
 
 ### Phase 4: Tokio版への書き換え
 - [ ] Step 15: `tokio::net::TcpListener` + `.accept().await` に置き換え
